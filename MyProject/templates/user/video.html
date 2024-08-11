@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+video
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center"><b class="text-yourcolor">Videos</b>
+    <i class="fa-solid fa-video sicon text-mycolor"></i></b></div>
+<br><br>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <!-- video-->
+            {% for x in vdata %}
+            <div class="col-sm-3">
+                <div class="card vheight">
+                    <iframe class=" w-100 img-card-top" style="height:200px;" src="{{x.vlink}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">{{x.vtitle}}</h5>
+
+                        <span class="btn btn-sm btn-yourcolor">
+                            <i class="fa-solid fa-calendar-days"></i> {{x.vdate}}
+                        </span>
+                        <a href="/user/details?msg={{x.id}}" class="btn btn-sm bg-mycolor">view more</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            <!--End video-->
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+{% endblock x %}

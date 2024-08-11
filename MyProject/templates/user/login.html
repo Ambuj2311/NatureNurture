@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+login
+{% endblock %}
+{% block x %}
+<div class="row bg-primary">
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+                {% if nmg %}
+        <div class="alert alert-success">
+            Your Data Seved Successfully.....
+        </div>
+        {% endif %}
+        <form method="post">
+             {% csrf_token %}<!--security ke liye-->
+            <div class="text-center fs-2">Admin <b class="text-mycolor">Login<i class="fa-solid fa-key fa-spin"></i></b></div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-envelope"></i>
+                </i>
+                <input name="email" required type="email" class="form-control" placeholder="Email"/>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-lock"></i>
+                </i>
+                <input name="password" required type="password" class="form-control" placeholder="Password"/>
+            </div>
+            <br/><input type="submit" value="Login" class="form-control bg-mycolor"/>
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+</div>
+{% endblock x %}

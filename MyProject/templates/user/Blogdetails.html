@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Blogdetails
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center">Blog Details <b class="text-mycolor"></b>
+    <i class="fa-solid fa-video sicon text-mycolor"></i></b></div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="row">
+        {% for i in data %}
+            <div class="col-sm-12">
+                <div class="card">
+                   <img src="/{{i.bpic}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-tile">{{i.bname}}</h5>
+                        <p>
+                            {{i.bdes}}
+                        </p>
+
+                        <span class="btn btn-sm btn-yourcolor">
+                            <i class="fa-solid fa-calendar-days"></i> {{x.bdate}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Sliderdetails
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center">Slider Details <b class="text-mycolor"></b>
+    <i class="fa-solid fa-video sicon text-mycolor"></i></b></div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="row">
+        {% for a in res %}
+            <div class="col-sm-12">
+                <div class="card">
+                   <img src="/{{a.spic}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-tile">{{a.shead}}</h5>
+                      <h6>{{a.ssubject}}</h6>
+                        <p>
+                            {{a.sdes}}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+
+{% endblock %}

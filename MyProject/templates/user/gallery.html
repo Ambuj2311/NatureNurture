@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+gallery
+{% endblock %}
+{% block x %}
+<div class="row">
+    <div class="fs-2 text-center"><b class="text-yourcolor">Images</b>
+    <i class="fa-solid fa-images sicon text-mycolor"></i></div>
+
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+    <div class="row">
+            {% if data %}
+            {% for x in data %}
+        <div class="col-sm-4 my-2">
+       <!-- start card-->
+            <div class=" w-100">
+  <img src="/{{x.gpic}}" class="card-img-top cheight" alt="...">
+  
+</div>
+        <!-- end card-->
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+     </div>
+    <div class="col-sm-1"></div>
+</div>
+</div>
+
+{% endblock x %}

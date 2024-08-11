@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+blog
+{% endblock %}
+{% block x %}
+<h1     >Our Blogs will gohere!!</h1>
+<!--<div class="row bg-info">
+    <div class="fs-2 text-center"><b>Blogs</b><b class="text-mycolor"></b>
+    <i class="fa-brands fa-blogger sicon text-mycolor"></i></div>-->
+<!--start search-->
+<!--<form method="post">
+    {% csrf_token %}
+<div class="row my-4">
+    <div class="col-sm-5 mx-auto bg-yourcolor p-2">
+        <div class="input-group">
+            <input name="search" type="text" class="form-control" placeholder="Search.."/>
+            <span class="input-group-text bg-mycolor border-0">
+                <input type="submit" value="Search" class="btn bg-yourcolor"/>
+            </span>
+        </div>
+    </div>
+</div>
+    </form>-->
+<!--end search-->
+
+<!--<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            {% for x in bdata%}
+            <div class="col-sm-4">
+                <div class="card bbheight">
+            <img src="/{{x.bpic}}" class="img-fluid rounded-start" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{x.bname}}</h5>
+                <p>{{x.bdes}}</p>
+                <a href="#" class="btn btn-sm bg-yourcolor">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    {{x.bdate}}
+                </a>
+            </div>
+        </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+</div>
+-->
+
+{% endblock x %}

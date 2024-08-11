@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+membership
+{% endblock %}
+{% block x %}
+
+<div class="row p-0">
+    <div class="fs-2 text-center p-0"><b>Member<span class="text-mycolor">ship</span></b>
+    <i class="fa-solid fa-user-group sicon text-mycolor"></i></div>
+<div class="row p-0 ">
+    <div class="col-sm-6 p-0 img-fluid rounded-start my-5">
+    <img src="{% static 'images/slider3.jpg' %}"  height="400px" class="" alt="..."/>
+    </div>
+
+    <div class="col-sm-6 p-0">
+                {% if mng %}
+        <div class="alert alert-success">
+            Your Data Seved Successfully.....
+        </div>
+        {% endif %}
+        <form method="post" style="padding-top:50px" enctype="multipart/form-data">
+            {% csrf_token %}<!--security ke liye-->
+            <div class="input-group mb-2 p-0">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-regular fa-user"></i>
+                </i>
+                <input name="name" required type="text" class="form-control" placeholder="Name."/>
+            </div>
+            <div class="input-group mb-2 p-0">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-envelopes-bulk"></i>
+                </i>
+                <input name="pincode" required type="text" class="form-control" placeholder="Pincode..."/>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-city"></i>
+                </i>
+                <select required class="form-control" name="city" type="city">
+                  {% for x in ct %}
+                  <option>{{x.ncity}}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-envelope"></i>
+                </i>
+                <input name="email" required type="email" class="form-control" placeholder="Email."/>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-building-columns"></i>
+                </i>
+                <input name="bankaccount" required type="text" class="form-control" placeholder="Bankaccount"/>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-building"></i>
+                </i>
+                <input name="companyaddress" required type="text" class="form-control" placeholder="Companyaddress"/>
+            </div>
+            <div class="input-group mb-2">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-solid fa-address-card"></i>
+                </i>
+                <input name="address" required type="text" class="form-control" placeholder="Address"/>
+                <input type="file" name="ppic" class="form-control"/>
+            </div>
+            <br/><input type="submit" value="Save" class="form-control bg-mycolor"/>
+            </form>
+            </div>
+
+
+</div>
+</div>
+{% endblock x %}

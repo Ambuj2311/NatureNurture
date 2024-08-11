@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+contact
+{% endblock %}
+{% block x %}
+<div class="row">
+    <div class="fs-2 text-center"><b>Contact <span class="text-mycolor">US</span></b>
+        <i class="fa-solid fa-address-book sicon text-mycolor"></i></div>
+<div class="row">
+
+<div class="col-sm-1"></div>
+<div class="col-sm-5 centered" style="margin-top: 100px;">
+    <img src="{% static 'images/handshake1.png' %}" height="300px" width="500px" alt="">
+</div>
+    <div class="col-sm-5 frm">
+
+        {% if msg %}
+        <div class="alert alert-success">
+            Your Data Seved Successfully.....
+        </div>
+        {% endif %}
+        <form method="post" style="padding-top:100px">
+
+            {% csrf_token %}<!--security ke liye-->
+            <div class="input-group mb-4 ">
+                <i class="input-group-text bg-mycolor text-light">
+                     <i class="fa-regular fa-user"></i>
+                </i>
+                <input name="name" required type="text" class="form-control" placeholder="Name."/>
+            </div>
+            <div class="input-group mb-4 ">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-envelope"></i>
+                </i>
+                <input name="email" required type="email" class="form-control" placeholder="email"/>
+            </div>
+                        <div class="input-group mb-4">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-phone"></i>
+                </i>
+                <input name="mob" required type="text" class="form-control" placeholder="mobile"/>
+            </div>
+                        <div class="input-group mb-4">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-message"></i>
+                </i>
+                <textarea name="msg" required class="form-control" placeholder="Message"></textarea>
+            </div>
+            <br/><input type="submit" value="Save" class="form-control bg-yourcolor"/>
+
+        </form>
+       <!-- <div class="alert alert-success">
+
+            Name Is:{{Name}}<br/>
+            Email Is:{{Email}}<br/>
+            Mobile Is:{{Mobile}}<br/>
+            Message Is:{{Message}}<br/>
+
+        </div>-->
+    </div>
+<div class="col-sm-1"></div>
+</div>
+
+</div>
+
+
+{% endblock x %}

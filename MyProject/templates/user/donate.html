@@ -1,0 +1,109 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+donate
+{% endblock %}
+{% block x %}
+<div class="row p-0" style="background-color: lightgray;">
+    <div class="fs-2 text-center p-0">Donate <b class="text-mycolor"></b>now
+        <i class="fa-solid fa-circle-dollar-to-slot sicon text-mycolor"></i>
+    </div>
+
+    <div class="row p-0">
+        <div class="col-sm-7 p-0">
+            <div class="row">
+
+            </div>
+
+        </div>
+        <div class="col-sm-5 p-0">
+            {% if nsg %}
+            <div class="alert alert-success">
+                Your Data Seved Successfully.....
+            </div>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}<!--security ke liye-->
+                <div class="input-group mb-2 p-0">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </i>
+                    <input name="amountvalue" required type="text" class="form-control" placeholder="Amount" />
+                </div>
+                <div class="input-group mb-2 p-0">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-signature"></i>
+                    </i>
+                    <input name="firstname" required type="text" class="form-control" placeholder="Firstname" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-signature"></i>
+                    </i>
+                    <input name="lastname" required type="text" class="form-control" placeholder="Lastname" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-envelope"></i>
+                    </i>
+                    <input name="email" required type="text" class="form-control" placeholder="Email" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-phone"></i>
+                    </i>
+                    <input name="phone" required type="text" class="form-control" placeholder="Phone" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-globe"></i>
+                    </i>
+                    <select required class="form-control" name="country" type="country">
+                        {% for x in cct %}
+                        <option>{{x.scountry}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-address-card"></i>
+                    </i>
+                    <input name="address" required type="text" class="form-control" placeholder="Address" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-brands fa-usps"></i>
+                    </i>
+                    <select required class="form-control" name="state" type="state">
+                        {% for x in st %}
+                        <option>{{x.mstate}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-city"></i>
+                    </i>
+                    <input name="pincode" required type="text" class="form-control" placeholder="Pincode" />
+                </div>
+                <div class="input-group mb-2">
+                    <i class="input-group-text bg-mycolor text-light">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </i>
+                    <input name="occupation" required type="text" class="form-control" placeholder="Occupation" />
+                    <input type="file" name="ppic" class="form-control" />
+                </div>
+                </br>
+                <input type="submit" value="Save" class="form-control bg-yourcolor" />
+            </form>
+            </br>
+            <div class="row">
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+{% endblock x %}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      {% block title %}
+      our couses
+      {% endblock %}
+    </title>
+</head>
+<body>
+{% block x %}
+
+    <!--<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        
+    </style> -->
+</head>
+<body>
+
+<div class="container">
+    <div class="fs-2 text-center "><b>Our</b> <b class="text-mycolor">Causes <span class="fa fa-heart"></span></b>
+        <i class="fa-solid sicon text-mycolor"></i></div>
+    <section id="greenery-causes">
+        
+
+        <div class="row">
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes1.jpg' %}" class="card-img-top" alt="Tree Plantation Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Tree Plantation Drive</h5>
+                        <p class="card-text">Join our campaign to plant more trees and contribute to a greener environment.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes2.jpg' %}" class="card-img-top" alt="Urban Garden Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Urban Garden Project</h5>
+                        <p class="card-text">Support our initiative to create urban gardens, promoting sustainable living in cities.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes3.jpg' %}" class="card-img-top" alt="Green Energy Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Green Energy Advocacy</h5>
+                        <p class="card-text">Advocate for the use of renewable energy sources and reduce our carbon footprint.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes4.jpg' %}" class="card-img-top" alt="Wildlife Conservation Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Wildlife Conservation</h5>
+                        <p class="card-text">Join efforts to protect and conserve the natural habitats of wildlife <br> species.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes5.jpg' %}" class="card-img-top" alt="Clean Energy Solutions Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Clean Energy Solutions</h5>
+                        <p class="card-text">Explore and implement innovative solutions for clean and sustainable energy.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/causes6.jpg' %}" class="card-img-top" alt="Environmental Education Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Environmental Education</h5>
+                        <p class="card-text">Promote awareness and education on environmental issues for a greener future.</p>
+                  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Add more sections and cards as needed -->
+
+</div>
+
+
+
+{% endblock %}
+</body>
+</html>

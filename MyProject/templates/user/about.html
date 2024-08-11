@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+about
+{% endblock %}
+{% block x %}
+<div class="row">
+    <div class="col-sm-12">
+<div class="fs-2 text-center p-1"><b>About</b><b class="text-mycolor"> Us</b>
+    <i class="fa-solid fa-user-group sicon text-mycolor"></i>
+</div>
+<div class="row p-0 my-3" style="background-color: rgb(225, 224, 224);">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 ">
+        <img src="{% static 'images/aboutpic1.jpg' %}" height="300px" width="100%"/>
+    </div>
+    <div class="col-sm-5">
+        <b style="font-size:35px; color:green;">Nature Nurture</b>
+        <p style="text-align:justify; color:black">Our mission is driven by a deep-seated motivation to address pressing environmental challenges, bridge the gap between awareness and action, and leverage technology for the greater good. We aim to educate, engage, and inspire positive change in the face of climate change, biodiversity loss, habitat destruction, and other critical environmental issues.In essence, our mission is to serve as a catalyst for environmental advocacy, community building, and collaborative efforts, with the ultimate goal of preserving and protecting our planet's precious ecosystems and resources. Nature Nurture is not just a website; it's a mission to create a positive impact on our environment and inspire change.
+        </p>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row my-5">
+    <h1 class="text-center"><b>Our </b><b class="text-mycolor">Volunteers</b></h1>
+    <div class="row my-0">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="oheight mt-3">
+                      <div class="vol">
+                        <img src="{% static 'images/girlnodp.jpg' %}" class="card-img-top ivol" alt="..."></div>
+                        <div class="card-body">
+                            <h5 style="text-align: center; color: green; font-weight: bold; margin-right:45px;">Monika Yadav</h5>
+                            <p style="text-align:justify; " class="card-text">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="oheight mt-3 ">
+                      <div class="vol">
+                        <img src="{% static 'images/boynodp.jpg' %}" class="card-img-top ivol"  alt="...">
+                      </div>
+                        <div class="card-body">
+                          <h5 style="text-align: center; color: green; font-weight: bold;margin-right:20px;">Ambuj Srivastava</h5>
+                            <p style="text-align:justify;" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class=" oheight mt-3">
+                      <div class="vol">  
+                      <img src="{% static 'images/girlnodp.jpg' %}" class="card-img-top ivol" alt="..."></div>
+                        <div class="card-body">
+                          <h5 style="text-align: center; color: green; font-weight: bold; margin-right:30px;">Dolly Maurya</h5>
+                            <p style="text-align:justify;" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+
+    </div>
+
+</div>
+</div>
+</div>
+{% endblock x %}

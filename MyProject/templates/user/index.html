@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Nature Nurture
+{% endblock %}
+{% block x %}
+
+
+<div class="row slider">
+  <div class="col-sm-12 s1 p-0 ">
+    <!-- start slider-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="True">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/earth2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <!-- loop-->
+        {% for a in res %}
+        <div class="carousel-item">
+          <img src="/{{a.spic}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <!--<h5>{{a.shead}}</h5>
+          <p>{{a.ssubject}}</p>
+          <a href="/user/sdetails?ssg={{a.id}}" class="btn btn-sm bg-yourcolor">More</a>
+        -->
+          </div>
+        </div>
+        {% endfor %}
+        <!--end loop-->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="True">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!--end slider-->
+
+  <!--<div class="col-sm-5 s2 ">
+
+            {% for b in evt %}
+            <div class="card mt-1 ">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/{{b.epic}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body ">
+        <h5 class="card-title">{{b.title}}</h5>
+          <span class="btn btn-sm btn-yourcolor">
+              <i class="fa-solid fa-calendar-days"></i> {{b.date}}
+          </span>
+          <a href="/user/eventdetails?psg={{b.id}}" class="btn btn-sm bg-yourcolor">view more</a>
+      </div>
+    </div>
+  </div>
+</div>
+        {% endfor %}
+</div>
+</div>-->
+
+  <!--Our Promises start-->
+  <div class="row ncategory my-5">
+    <div class="col-sm-12">
+      <h1 class="text-center">Our Promises Towards <b class="text-mycolor">Nature</b> </h1>
+      <!--<h4 style="text-align: center; color: green; font-weight: bolder;">WE LOVE TO PLANT ECOLOGY</h4>-->
+      <p class="text-center"  style="text-align: center; color: green;font-weight: bold;">Our goal is to nurture nature, leaving a greener, cleaner, and more sustainable world <br> for future generations.</p>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+          <div class="card cheight">
+            <img src="{% static 'images/cleaning1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-text " style="text-align: center; font-weight: bold;">Environmental Cleanup</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="card cheight">
+            <img src="{% static 'images/recycle1.jpeg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-text" style="text-align: center; font-weight: bold;">Recycling and Waste Reduction
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="card cheight">
+            <img src="{% static 'images/Ecofriendly1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-text" style="text-align: center; font-weight: bold;">Eco-Friendly Choices</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="card cheight">
+            <img src="{% static 'images/conservation1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-text" style="text-align: center; font-weight: bold;">Conservation Initiatives</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="card cheight">
+            <img src="{% static 'images/sustain1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-text" style="text-align: center; font-weight: bold;">Promoting Sustainable Living</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+  </div>
+  <!--Our Volunteer-->
+
+  <div class="row">
+    <h1 class="text-center"><b>Our </b><b class="text-mycolor">Volunteers</b></h1>
+    <div class="row my-0">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="oheight mt-3">
+                      <div class="vol">
+                        <img src="{% static 'images/girlnodp.jpg' %}" class="card-img-top ivol" alt="..."></div>
+                        <div class="card-body">
+                            <h5 style="text-align: center; color: green; font-weight: bold;">Monika Yadav</h5>
+                            <p style="text-align:justify; " class="card-text">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="oheight mt-3 ">
+                      <div class="vol">
+                        <img src="{% static 'images/boynodp.jpg' %}" class="card-img-top ivol"  alt="...">
+                      </div>
+                        <div class="card-body">
+                          <h5 style="text-align: center; color: green; font-weight: bold;">Ambuj Srivastava</h5>
+                            <p style="text-align:justify;" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class=" oheight mt-3">
+                      <div class="vol">  
+                      <img src="{% static 'images/girlnodp.jpg' %}" class="card-img-top ivol" alt="..."></div>
+                        <div class="card-body">
+                          <h5 style="text-align: center; color: green; font-weight: bold;">Dolly Maurya</h5>
+                            <p style="text-align:justify;" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+
+    </div>
+
+</div>
+  <!--End-->
+  <!--<h1 class="text-center">Our<b class="text-mycolor">Blogs</b></h1>
+  <div class="row">
+    {% for i in data %}
+    <div class="col-sm-4 my-3">
+      <div class="card bheight">
+        <img src="/{{i.bpic}}" class="img-card-top w-100" />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{i.bname}}</h5>
+          <p>{{i.bdis}}</p>
+          <i class="text-muted">Date :{{i.bdate}}</i>
+          <a href="/user/bdetails?bsg={{i.id}}" class="btn btn-sm bg-yourcolor text-center">View more</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>-->
+
+  <div class="row" style="margin-top: 30px;">
+    <h1 class="text-center"><b>Our </b><b class="text-mycolor">Gallery</b></h1>
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-10">
+
+      {% for a in img %}
+      <img src="/{{a.gpic}}" height="200px" width="230px" class="ps-2 mt-2" />
+      {% endfor %}
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="row inews"></div>
+  <div class="row vnews"></div>
+  <div class="row city"></div>
+
+  {% endblock %}
